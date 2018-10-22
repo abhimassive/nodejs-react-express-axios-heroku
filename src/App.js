@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import './App.css';
-import Output from "./Components/output";
-import Select from './Components/Controls/select'
-import Text from './Components/Controls/text';
+import Output from './Components/output'
+import Type from './Components/Controls/type'
+import Paras from './Components/Controls/paras'
+import Length from './Components/Controls/length'
 import axios from 'axios'
 const proxyURL = 'https://cors.io/?'
 
@@ -11,6 +12,7 @@ class App extends Component {
     super(props)
     this.state = {
       paras: 2,
+      length: 'short',
       type: 'plaintext',
       text: ''
     }
@@ -21,19 +23,22 @@ class App extends Component {
   }
 
   getSampleText() {
-    axios.get(proxyURL + 'https://loripsum.net/api/' + this.state.paras + '/' + this.state.type)
+    axios.get(proxyURL + 'https://loripsum.net/api/' + this.state.paras + '/' + this.state.length + '/' + this.state.type)
       .then((response) => {
         this.setState({ text: response.data }, function () {
-          // console.log(response.data)
         })
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err)
       })
   }
 
   changeParas(number) {
-    this.setState({ paras: number }, this.getSampleText);
+    this.setState({ paras: number }, this.getSampleText)
+  }
+
+  changeLength(l) {
+    this.setState({ length: l }, this.getSampleText)
   }
 
   showType(x) {
@@ -48,12 +53,16 @@ class App extends Component {
         <hr />
         <form className='form-inline'>
           <div className="form-group">
-            <label>Paragraphs</label>
-            <Text value={this.state.paras} onChange={this.changeParas.bind(this)} />
+            <label>Paragraphs (0 - 99)</label>
+            <Paras value={this.state.paras} onChange={this.changeParas.bind(this)} />
           </div>
           <div className='form-group'>
             <label>Format</label>
-            <Select value={this.state.type} onChange={this.showType.bind(this)} />
+            <Type value={this.state.type} onChange={this.showType.bind(this)} />
+          </div>
+          <div className='form-group'>
+            <label>Length</label>
+            <Length value={this.state.length} onChange={this.changeLength.bind(this)} />
           </div>
         </form>
         <br></br>
