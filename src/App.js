@@ -23,7 +23,11 @@ class App extends Component {
   }
 
   getSampleText() {
-    axios.get(proxyURL + 'https://loripsum.net/api/' + this.state.paras + '/' + this.state.length + '/' + this.state.type)
+    axios.get(proxyURL +
+      'https://loripsum.net/api/' +
+      this.state.paras + '/' +
+      this.state.length + '/' +
+      this.state.type)
       .then((response) => {
         this.setState({ text: response.data }, function () {
         })
