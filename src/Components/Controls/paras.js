@@ -10,14 +10,14 @@ class Text extends Component {
 
   onChange(e) {
     this.setState({ value: e.target.value }, function () {
-      this.props.onChange(this.state.value);
-    });
+      this.props.onChange(this.state.value)
+    })
   }
 
   render() {
     return (
       <div>
-        <input className="form-control" type="number" value={this.state.value} onChange={this.onChange.bind(this)} />
+        <input className="form-control" type="text" value={this.state.value} onChange={this.onChange.bind(this)} />
       </div>
     )
   }
