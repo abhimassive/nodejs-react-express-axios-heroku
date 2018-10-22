@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './App.css';
+import './App.css'
 import Output from './Components/output'
 import Type from './Components/Controls/type'
 import Paras from './Components/Controls/paras'
@@ -66,13 +66,10 @@ class App extends Component {
           </div>
         </form>
         <br></br>
-
         <Output value={this.state.text} />
-
-
       </div>
     );
   }
 }
 
-export default App;
+export default App
