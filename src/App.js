@@ -77,10 +77,7 @@ class App extends Component {
           <Output value={this.state.text} />
         </div>
         <div id="footer">
-          <p>Developed by: Abhi</p>
-          <p>Contact information: <a href="mailto:abhi358@gmail.com">abhi358@gmail.com</a></p>
-          <p>GitHub Repo: <a href="https://github.com/abhimassive/nodejs-react-express-axios-heroku">Click Here</a></p>
-
+          <p>Developed by: <a href="https://github.com/abhimassive/nodejs-react-express-axios-heroku">Abhi</a></p>
         </div>
 
       </div>

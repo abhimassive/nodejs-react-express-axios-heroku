@@ -7,16 +7,17 @@ select{margin-right: 40px;}
 }
 #body {
    padding:10px;
-   padding-bottom:60px;   /* Height of the footer */
+   padding-bottom:100px;   /* Height of the footer */
 }
 #footer {
-    padding:10px;
+    padding:14px;
     clear: both;
     position: relative;
     z-index: 10;
     height: 3em;
     margin-top: -em;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
+    font-family: "Lucida Console", Monaco, monospace;
 }
 
