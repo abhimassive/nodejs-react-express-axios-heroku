@@ -1,4 +1,4 @@
-![Heroku](https://heroku-badge.herokuapp.com/?app=floating-earth-36039)
+![Heroku](https://heroku-badge.herokuapp.com/?app=text-gene)
 
 A simple [React](https://github.com/facebook/react) single-page web-app to generate random Text using [Loren Ipsum](https://loripsum.net/) APIs
 
