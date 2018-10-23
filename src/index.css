@@ -1,3 +1,22 @@
 input{margin-right: 40px;}
 select{margin-right: 40px;}
 .output{white-space: pre-line;}
+
+#header {
+   padding:10px;
+}
+#body {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
+}
+#footer {
+    padding:10px;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -em;
+    font-size: 14px;
+    font-style: normal;
+}
+
