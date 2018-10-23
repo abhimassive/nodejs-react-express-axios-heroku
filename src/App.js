@@ -12,7 +12,7 @@ class App extends Component {
     super(props)
     this.state = {
       paras: 2,
-      length: 'short',
+      length: 'medium',
       type: 'plaintext',
       text: ''
     }
@@ -52,25 +52,37 @@ class App extends Component {
   render() {
     return (
       <div className="App container">
-        <h1>ReactJS Sample Text Generator</h1>
-        <hr />
-        <hr />
-        <form className='form-inline'>
-          <div className="form-group">
-            <label>Paragraphs (0 - 99)</label>
-            <Paras value={this.state.paras} onChange={this.changeParas.bind(this)} />
-          </div>
-          <div className='form-group'>
-            <label>Format</label>
-            <Type value={this.state.type} onChange={this.showType.bind(this)} />
-          </div>
-          <div className='form-group'>
-            <label>Length</label>
-            <Length value={this.state.length} onChange={this.changeLength.bind(this)} />
-          </div>
-        </form>
-        <br></br>
-        <Output value={this.state.text} />
+        <div id="header">
+          <h3>Loren Ipsum Text Generator</h3>
+          <h6>A Sample Text Generator built in NodeJs</h6>
+          <hr />
+          <hr />
+        </div>
+        <div id="body">
+          <form className='form-inline'>
+            <div className="form-group">
+              <label>Paragraphs (0 - 99)</label>
+              <Paras value={this.state.paras} onChange={this.changeParas.bind(this)} />
+            </div>
+            <div className='form-group'>
+              <label>Format</label>
+              <Type value={this.state.type} onChange={this.showType.bind(this)} />
+            </div>
+            <div className='form-group'>
+              <label>Length</label>
+              <Length value={this.state.length} onChange={this.changeLength.bind(this)} />
+            </div>
+          </form>
+          <br></br>
+          <Output value={this.state.text} />
+        </div>
+        <div id="footer">
+          <p>Developed by: Abhi</p>
+          <p>Contact information: <a href="mailto:abhi358@gmail.com">abhi358@gmail.com</a></p>
+          <p>GitHub Repo: <a href="https://github.com/abhimassive/nodejs-react-express-axios-heroku">Click Here</a></p>
+
+        </div>
+
       </div>
     );
   }
